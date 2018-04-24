@@ -1,0 +1,126 @@
+[colors]
+background = #212121
+background-alt = #37474f
+foreground = #ffffff
+foreground-alt = #424242
+
+clock = #ffc107
+battery = #8bc34a
+wlan = #607d8b
+volume = #00bcd4
+mail = #ef5350
+updates = #673AB7
+
+[bar/status]
+monitor = ${env:MONITOR:eDP-1}
+
+font-0 = Ubuntu Mono:pixelsize=12;3
+font-1 = Material Icons:pixelsize=13;5
+
+modules-left = bspwm
+modules-right = updates mail backlight volume wlan battery clock
+radius = 4
+
+module-margin-left = 1
+module-margin-right = 1
+padding-left = 1
+padding-right = 1
+
+background = ${colors.background}
+
+width = 1910
+offset-y = 5
+offset-x = 5
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-padding = 1
+label-focused-background = ${colors.background-alt}
+
+label-occupied = %index%
+label-occupied-padding = 1
+
+label-empty = %index%
+label-empty-padding = 1
+label-empty-foreground = ${colors.foreground-alt}
+
+[module/clock]
+type = internal/date
+interval = 1
+
+date = %Y/%m/%d
+time = %H:%M:%S
+
+format = <label>
+format-foreground = ${colors.clock}
+label =  %date%  %time%
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
+
+time-format = %H:%M
+
+label-charging =  %percentage%% %time%
+label-discharging =  %percentage%% %time%
+label-full =  %percentage%%
+
+format-charging-foreground = ${colors.battery}
+format-discharging-foreground = ${colors.battery}
+format-full-foreground = ${colors.battery}
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 1
+
+format-connected = <label-connected>
+format-connected-foreground = ${colors.wlan}
+label-connected =  %essid%
+format-disconnected =
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-foreground = ${colors.volume}
+label-volume = %percentage%%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+format-muted-foreground = ${colors.volume}
+label-muted = 
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+
+format = <ramp> <label>
+label = %percentage%%
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+[module/mail]
+type = custom/script
+exec = cat ~/.gmail
+format-foreground = ${colors.mail}
+label =  %output%
+interval = 30
+
+[module/updates]
+type = custom/script
+exec-if = [ -s ~/.updates ]
+exec = wc -l ~/.updates | sed 's/\ .*//g'
+format-foreground = ${colors.updates}
+label =  %output%
+interval = 30

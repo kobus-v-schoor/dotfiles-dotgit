@@ -1,0 +1,10 @@
+# Available groups : x
+
+laptop=laptop,x
+
+# X related
+.config/polybar/config:x
+.config/termite/config:x
+.fehbg:x
+.wallpaper.jpg:x
+.xinitrc:x

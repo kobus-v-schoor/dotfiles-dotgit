@@ -1,0 +1,6 @@
+[options]
+font = Ubuntu Mono 11
+cursor_shape = underline
+
+[colors]
+background = #120F0F
