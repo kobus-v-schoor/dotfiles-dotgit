@@ -1,6 +1,7 @@
 # Available groups : x
 
 laptop=laptop,x
+desktop=desktop,x
 
 # X related
 .config/polybar/config:x
@@ -10,3 +11,4 @@ laptop=laptop,x
 .xinitrc:x
 
 .config/bspwm/bspwmrc:laptop
+.config/bspwm/bspwmrc:desktop
