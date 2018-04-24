@@ -4,13 +4,13 @@ background-alt = #37474f
 foreground = #ffffff
 foreground-alt = #424242
 
-clock = #ffc107
+clock = #FFCC80
 battery = #8bc34a
 wlan = #607d8b
 eth = #FF5722
-volume = #00bcd4
-mail = #ef5350
-updates = #673AB7
+volume = #80DEEA
+mail = #e57373
+updates = #B39DDB
 
 [bar/status]
 font-0 = Ubuntu Mono:pixelsize=12;3
