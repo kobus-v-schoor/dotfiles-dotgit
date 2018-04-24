@@ -12,6 +12,7 @@ desktop=desktop,x,shell,shell-extra
 .fehbg:x
 .wallpaper.jpg:x
 .xinitrc:x
+.config/sxhkd/sxhkdrc:x
 .config/user-dirs.dirs:x
 
 .config/bspwm/bspwmrc:laptop
