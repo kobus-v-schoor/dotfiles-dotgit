@@ -1,0 +1,33 @@
+export LIBVIRT_DEFAULT_URI=qemu:///system
+
+alias sts='git status'
+alias dff='git diff'
+alias cmt='git commit -am '
+alias sth='git stash'
+alias stha='git stash apply'
+alias gadd='git add'
+
+alias ddff='dotgit diff'
+alias gen='dotgit generate'
+
+alias progress='watch -n 1 grep -e Dirty: -e Writeback: /proc/meminfo'
+alias xclip='xclip -selection clipboard'
+
+alias mnt='~/.scripts/blkdev mount'
+alias umnt='~/.scripts/blkdev unmount'
+alias ks='ls ~/usb/'
+alias ud='sudo true && packer -Syu && sudo -E pacdiff && cp /dev/null ~/.updates'
+alias wt='cat ~/.updates'
+
+alias dpms_off='xset s off; xset -dpms'
+
+function venv {
+	for d in .venv venv .env env; do
+		if [ -d $d ]; then
+			source $d/bin/activate
+			break
+		fi
+	done
+}
+
+

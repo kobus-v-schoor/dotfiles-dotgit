@@ -1,9 +1,13 @@
-# Available groups : x
+# Available groups : x,shell,shell-extra
+#
+# x: xinit, window manager and status bar
+# shell: basic shell aliases and environment variables
+# shell-extra: extra shell configs that are more personalized
 
-laptop=laptop,x
-desktop=desktop,x
+laptop=laptop,x,shell,shell-extra
+desktop=desktop,x,shell,shell-extra
 
-# X related
+# x
 .config/polybar/config:x
 .config/termite/config:x
 .fehbg:x
@@ -12,3 +16,8 @@ desktop=desktop,x
 
 .config/bspwm/bspwmrc:laptop
 .config/bspwm/bspwmrc:desktop
+
+# shell, shell-extra
+.bashrc:shell
+.bash_profile:shell
+.bash_extra:shell-extra
