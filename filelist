@@ -9,13 +9,15 @@ desktop=desktop,x,shell,shell-extra
 
 # x
 .config/polybar/config:x
-.config/termite/config:x
 .fehbg:x
 .wallpaper.jpg:x
 .xinitrc:x
 
 .config/bspwm/bspwmrc:laptop
 .config/bspwm/bspwmrc:desktop
+
+.config/termite/config:laptop
+.config/termite/config:desktop
 
 # shell, shell-extra
 .bashrc:shell
