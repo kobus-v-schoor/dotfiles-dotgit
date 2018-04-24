@@ -8,3 +8,5 @@ laptop=laptop,x
 .fehbg:x
 .wallpaper.jpg:x
 .xinitrc:x
+
+.config/bspwm/bspwmrc:laptop
