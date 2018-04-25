@@ -84,8 +84,8 @@ super + button{1-3}
 XF86AudioMute
 	amixer set Master toggle
 
-# {XF86MonBrightnessUp, XF86MonBrightnessDown}
-# 	echo {+,-} > /tmp/br_opr
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+	~/.scripts/br_change.sh {+,-}
 
 Scroll_Lock
 	$HOME/.scripts/headphones
