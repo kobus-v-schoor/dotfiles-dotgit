@@ -1,18 +1,23 @@
 #! /bin/bash
 
-low=15
-crt=5
+low_alert=20
+crit_alert=10
+crit=5
 
-p=
-l=
+prev=0
+
 while true; do
-	sleep 10s
-	p=$l
-	l=$(cat /sys/class/power_supply/BAT0/capacity)
-	[[ -z $p ]] && p=$l
-	[[ $l -gt $low ]] && continue
-	[[ $p -gt $low ]] && ~/.scripts/notify.sh alert 2 & continue
-	[[ $l -gt $crt ]] && continue
-	[[ $p -gt $crt ]] && systemctl suspend && continue
-done
+	sleep 1s
+	cur=$(cat /sys/class/power_supply/BAT0/capacity)
+	[[ $prev -eq 0 ]] && prev=$cur
 
+	if [[ $prev -gt $low_alert ]]; then
+		[[ $cur -le $low_alert ]] && ~/.scripts/notify.sh alert 2
+	elif [[ $prev -gt $crit_alert ]]; then
+		[[ $cur -le $crit_alert ]] && ~/.scripts/notify.sh urgent 2
+	elif [[ $prev -gt $crit ]]; then
+		[[ $cur -le $crit ]] && prev=$cur && systemctl suspend
+	fi
+
+	prev=$cur
+done
