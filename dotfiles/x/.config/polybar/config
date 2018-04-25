@@ -13,6 +13,9 @@ volume = #80DEEA
 mail = #e57373
 updates = #B39DDB
 
+notif_foreground = #212121
+notif_background = #FF9800
+
 [bar/status]
 font-0 = Ubuntu Mono:pixelsize=12;3
 font-1 = Material Icons:pixelsize=13;5
@@ -23,7 +26,12 @@ padding-left = 1
 padding-right = 1
 radius = 4
 
+modules-center = notifications
+fixed-center = true
+
 background = ${colors.background}
+
+enable-ipc = true
 
 [bar/status-laptop]
 inherit = bar/status
@@ -162,3 +170,14 @@ exec = wc -l ~/.updates | sed 's/\ .*//g'
 format-foreground = ${colors.updates}
 label =  %output%
 interval = 30
+
+[module/notifications]
+type = custom/ipc
+
+hook-0 = echo ""
+hook-1 = echo "  New mail has arrived  "
+hook-2 = echo "  Battery is low  "
+hook-3 = echo "  Battery is critically low  "
+
+format-foreground = ${colors.notif_foreground}
+format-background = ${colors.notif_background}
