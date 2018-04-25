@@ -57,11 +57,16 @@ inherit = bar/status
 monitor = ${env:MONITOR:DVI-I-0}
 
 modules-left = bspwm-multi
-modules-right = updates mail volume clock
+modules-right = temperature updates mail volume clock
 
 width = 1590
 offset-y = 5
 offset-x = 5
+
+[bar/status-tt-desktop]
+inherit = bar/status-desktop
+
+width = 1430
 
 [module/bspwm]
 type = internal/bspwm
@@ -203,3 +208,16 @@ hook-1 = echo "  Battery is critically low  "
 
 format-foreground = ${colors.notify-urgent-foreground}
 format-background = ${colors.notify-urgent-background}
+
+[module/temperature]
+type = internal/temperature
+warn-temperature = 80
+
+internal = 0.5
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
+
+label =  %temperature%
+label-warn =  %temperature%
+
+label-foreground = #78909C
+label-warn-foreground = #f44336

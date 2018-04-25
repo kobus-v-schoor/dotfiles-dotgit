@@ -9,6 +9,7 @@
 
 laptop=laptop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon
 desktop=desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon
+tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon
 
 # x
 .config/polybar/config:x
@@ -20,9 +21,11 @@ desktop=desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon
 
 .config/bspwm/bspwmrc:laptop
 .config/bspwm/bspwmrc:desktop
+.config/bspwm/bspwmrc:tt-desktop
 
 .config/termite/config:laptop
 .config/termite/config:desktop
+.config/termite/config:tt-desktop
 
 # shell, shell-extra
 .bashrc:shell
