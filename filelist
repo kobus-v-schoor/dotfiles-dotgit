@@ -33,6 +33,7 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon
 .bash_extra:shell-extra
 
 # scripts, scripts-mod
+.scripts/auto-mount.sh:scripts
 .scripts/notify.sh:scripts-daemon
 
 .scripts/br_change.sh:laptop
