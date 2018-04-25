@@ -6,7 +6,6 @@ xmodmap -e 'keycode 134 = Menu'
 [ -f ~/.scripts/gmail.sh ] && $HOME/.scripts/gmail.sh &
 
 numlockx &
-compton --backend glx &
 $HOME/.fehbg &
 
 exec bspwm

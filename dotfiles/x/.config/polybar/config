@@ -214,7 +214,6 @@ type = internal/temperature
 warn-temperature = 80
 
 internal = 0.5
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
 
 label =  %temperature%
 label-warn =  %temperature%
