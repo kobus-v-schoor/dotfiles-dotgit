@@ -13,8 +13,14 @@ volume = #80DEEA
 mail = #e57373
 updates = #B39DDB
 
-notif_foreground = #212121
-notif_background = #FF9800
+notify-info-foreground = #212121
+notify-info-background = #009688
+
+notify-alert-foreground = #212121
+notify-alert-background = #FFC107
+
+notify-urgent-foreground = #212121
+notify-urgent-background = #f44336
 
 [bar/status]
 font-0 = Ubuntu Mono:pixelsize=12;3
@@ -26,7 +32,7 @@ padding-left = 1
 padding-right = 1
 radius = 4
 
-modules-center = notifications
+modules-center = notify-info notify-alert notify-urgent
 fixed-center = true
 
 background = ${colors.background}
@@ -171,13 +177,29 @@ format-foreground = ${colors.updates}
 label =  %output%
 interval = 30
 
-[module/notifications]
+[module/notify-info]
 type = custom/ipc
 
 hook-0 = echo ""
 hook-1 = echo "  New mail has arrived  "
-hook-2 = echo "  Battery is low  "
-hook-3 = echo "  Battery is critically low  "
 
-format-foreground = ${colors.notif_foreground}
-format-background = ${colors.notif_background}
+format-foreground = ${colors.notify-info-foreground}
+format-background = ${colors.notify-info-background}
+
+[module/notify-alert]
+type = custom/ipc
+
+hook-0 = echo ""
+hook-1 = echo "  Battery is low  "
+
+format-foreground = ${colors.notify-alert-foreground}
+format-background = ${colors.notify-alert-background}
+
+[module/notify-urgent]
+type = custom/ipc
+
+hook-0 = echo ""
+hook-1 = echo "  Battery is critically low  "
+
+format-foreground = ${colors.notify-urgent-foreground}
+format-background = ${colors.notify-urgent-background}
