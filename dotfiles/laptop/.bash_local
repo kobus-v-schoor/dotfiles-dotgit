@@ -1,0 +1,4 @@
+#! /bin/bash
+
+alias up='cd ~/.openvpn; sudo openvpn up.ovpn; cd -'
+alias cluster='cd ~/.openvpn/cluster; sudo openvpn client.conf; cd -'
