@@ -15,7 +15,7 @@ conky.config = {
 	own_window_argb_visual = true,
 	own_window_argb_value = 150,
 
-	update_interval = 0.1
+	update_interval = 1
 }
 
 conky.text = [[
