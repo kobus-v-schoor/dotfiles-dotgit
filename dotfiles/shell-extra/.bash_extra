@@ -1,3 +1,5 @@
+#! /bin/bash
+
 export LIBVIRT_DEFAULT_URI=qemu:///system
 
 alias sts='git status'
@@ -13,8 +15,8 @@ alias gen='dotgit generate'
 alias progress='watch -n 1 grep -e Dirty: -e Writeback: /proc/meminfo'
 alias xclip='xclip -selection clipboard'
 
-alias mnt='~/.scripts/auto-mount mount'
-alias umnt='~/.scripts/auto-mount unmount'
+alias mnt='~/.scripts/auto-mount.sh mount'
+alias umnt='~/.scripts/auto-mount.sh unmount'
 alias ks='ls ~/usb/'
 alias ud='sudo true && packer -Syu && sudo -E pacdiff && cp /dev/null ~/.updates'
 alias wt='cat ~/.updates'
@@ -30,4 +32,4 @@ function venv {
 	done
 }
 
-
+alias mng='python ./manage.py'

@@ -7,5 +7,7 @@ xmodmap -e 'keycode 134 = Menu'
 
 numlockx &
 $HOME/.fehbg &
+conky -dqc .conky
+compton -b --config ~/.config/compton.conf
 
 exec bspwm

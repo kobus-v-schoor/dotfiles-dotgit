@@ -2,3 +2,6 @@
 
 alias up='cd ~/.openvpn; sudo openvpn up.ovpn; cd -'
 alias cluster='cd ~/.openvpn/cluster; sudo openvpn client.conf; cd -'
+alias mnt_hdfs='sudo mount -t nfs -o vers=3,proto=tcp,nolock,noacl,sync localhost:/ '
+
+alias cnt_cluster='sudo systemd-nspawn -b -D ~/.cluster --bind /var/cache/pacman/pkg --bind /home/cube/repos:/srv'

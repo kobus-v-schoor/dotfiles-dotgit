@@ -18,6 +18,8 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon
 .xinitrc:x
 .config/sxhkd/sxhkdrc:x
 .config/user-dirs.dirs:x
+.config/compton.conf:x
+.conky:x
 
 .config/bspwm/bspwmrc:laptop
 .config/bspwm/bspwmrc:desktop
