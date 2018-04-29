@@ -14,7 +14,7 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon
 # x
 .config/polybar/config:x
 .fehbg:x
-.wallpaper.jpg:x
+.wallpaper.png:x
 .xinitrc:x
 .config/sxhkd/sxhkdrc:x
 .config/user-dirs.dirs:x
