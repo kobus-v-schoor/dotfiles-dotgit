@@ -3,7 +3,7 @@ conky.config = {
 	gap_x = 11,
 	gap_y = 11,
 
-	font = 'Ubuntu Mono:size=11',
+	font = 'Roboto Mono:size=9',
 	use_xft = true,
 	draw_shades = false,
 
@@ -12,8 +12,10 @@ conky.config = {
 	own_window_type = 'desktop',
 	own_window_colour = '212121',
 
-	own_window_argb_visual = true,
-	own_window_argb_value = 150,
+	lua_load = '~/.conky.lua',
+	lua_draw_hook_pre = 'conky_draw_bg',
+
+	own_window_transparent = true,
 
 	update_interval = 1
 }
