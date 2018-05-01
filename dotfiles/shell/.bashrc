@@ -4,7 +4,7 @@ shopt -s checkwinsize
 shopt -s autocd
 
 alias v=vim
-alias sv=sudoedit
+alias sv='sudoedit -E'
 
 alias ls='ls -lh --color=auto'
 alias lsa='ls -lha --color=auto'

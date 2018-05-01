@@ -1,7 +1,8 @@
 #! /bin/bash
 
-export EDITOR=nvim
-export DIFFPROG='nvim -d'
+export EDITOR=vim
+export SUDO_EDITOR=vim
+export DIFFPROG='vim -d'
 export LS_COLORS=$LS_COLORS:'di=1;35:'
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

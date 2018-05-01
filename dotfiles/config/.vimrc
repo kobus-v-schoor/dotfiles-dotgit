@@ -45,6 +45,7 @@ set ssop-=options " Don't keep options between sessions
 set spell spelllang=en
 set nospell
 set formatoptions=cro " Automatic comment continuation on next line
+set completeopt+=longest
 
 " Tab completion in insert mode
 " inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-x>\<C-n>"
