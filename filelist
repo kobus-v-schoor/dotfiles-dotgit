@@ -26,10 +26,6 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 .config/bspwm/bspwmrc:desktop
 .config/bspwm/bspwmrc:tt-desktop
 
-.config/termite/config:laptop
-.config/termite/config:desktop
-.config/termite/config:tt-desktop
-
 # shell, shell-extra
 .bashrc:shell
 .bash_profile:shell
@@ -47,3 +43,4 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 # config
 .vimrc:config
 .gitconfig:config
+.config/termite/config:config
