@@ -1,6 +1,6 @@
 conky.config = {
 	alignment = 'bottom_right',
-	gap_x = 11,
+	gap_x = 1377,
 	gap_y = 11,
 
 	font = 'Roboto Mono:size=9',

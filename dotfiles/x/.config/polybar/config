@@ -213,6 +213,8 @@ format-background = ${colors.notify-urgent-background}
 type = internal/temperature
 warn-temperature = 80
 
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+
 internal = 0.5
 
 label =  %temperature%

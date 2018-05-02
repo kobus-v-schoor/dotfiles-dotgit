@@ -19,12 +19,13 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 .config/sxhkd/sxhkdrc:x
 .config/user-dirs.dirs:x
 .config/compton.conf:x
-.conky:x
 .conky.lua:x
 
 .config/bspwm/bspwmrc:laptop
 .config/bspwm/bspwmrc:desktop
 .config/bspwm/bspwmrc:tt-desktop
+
+.conky:desktop
 
 # shell, shell-extra
 .bashrc:shell
