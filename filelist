@@ -25,6 +25,7 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 .config/bspwm/bspwmrc:desktop
 .config/bspwm/bspwmrc:tt-desktop
 
+.conky:laptop
 .conky:desktop
 
 # shell, shell-extra
