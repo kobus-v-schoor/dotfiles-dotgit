@@ -187,6 +187,7 @@ type = custom/ipc
 
 hook-0 = echo ""
 hook-1 = echo "  New mail has arrived  "
+hook-2 = echo "  New updates available  "
 
 format-foreground = ${colors.notify-info-foreground}
 format-background = ${colors.notify-info-background}
