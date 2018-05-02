@@ -35,9 +35,14 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 
 .bash_local:laptop
 
-# scripts, scripts-mod
+# scripts, scripts-mod, scripts-daemon
 .scripts/auto-mount.sh:scripts
+.scripts/make.sh:scripts
+
+.scripts/vol_change.sh:scripts-mod
+
 .scripts/notify.sh:scripts-daemon
+.scripts/ud_check.sh:scripts-daemon
 
 .scripts/br_change.sh:laptop
 .scripts/bat_check.sh:laptop
