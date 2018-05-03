@@ -1,5 +1,3 @@
-# Available groups : x,shell,shell-extra
-#
 # x: xinit, window manager and status bar
 # shell: basic shell aliases and environment variables
 # shell-extra: extra shell configs that are more personalized
