@@ -25,6 +25,7 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 
 .conky:laptop
 .conky:desktop
+.conky:tt-desktop
 
 # shell, shell-extra
 .bashrc:shell
