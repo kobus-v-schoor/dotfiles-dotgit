@@ -1,5 +1,7 @@
 #! /bin/bash
 
+export MAKEFLAGS='-j5'
+
 alias up='cd ~/.openvpn/up; sudo openvpn up.ovpn; cd -'
 alias cluster='cd ~/.openvpn/cluster; sudo openvpn client.conf; cd -'
 

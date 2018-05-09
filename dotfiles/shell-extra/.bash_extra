@@ -1,6 +1,7 @@
 #! /bin/bash
 
 export LIBVIRT_DEFAULT_URI=qemu:///system
+export PATH="$PATH:$HOME/.scripts"
 
 alias sts='git status'
 alias dff='git diff'
