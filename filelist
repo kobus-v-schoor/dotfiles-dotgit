@@ -39,6 +39,7 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 # scripts, scripts-mod, scripts-daemon
 .scripts/auto-mount.sh:scripts
 .scripts/make.sh:scripts
+.scripts/get_installed.sh:scripts
 
 .scripts/vol_change.sh:scripts-mod
 
