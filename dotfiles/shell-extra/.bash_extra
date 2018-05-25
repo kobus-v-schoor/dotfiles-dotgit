@@ -24,6 +24,9 @@ alias wt='cat ~/.updates'
 
 alias dpms_off='xset s off; xset -dpms'
 
+alias up='cd ~/.openvpn/up; sudo openvpn up.ovpn; cd -'
+alias cluster='cd ~/.openvpn/cluster; sudo openvpn client.conf; cd -'
+
 function venv {
 	for d in .venv venv .env env; do
 		if [ -d $d ]; then

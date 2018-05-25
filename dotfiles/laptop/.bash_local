@@ -2,8 +2,7 @@
 
 export MAKEFLAGS='-j5'
 
-alias up='cd ~/.openvpn/up; sudo openvpn up.ovpn; cd -'
-alias cluster='cd ~/.openvpn/cluster; sudo openvpn client.conf; cd -'
+alias ub_wifi='sudo rfkill unblock wifi'
 
 alias mnt_hdfs='sudo mount -t nfs -o vers=3,proto=tcp,nolock,noacl,sync localhost:/ '
 alias cnt_cluster='sudo systemd-nspawn -b -D ~/.cluster --bind /var/cache/pacman/pkg --bind /home/cube/repos:/srv'
