@@ -38,4 +38,9 @@ function venv {
 	done
 }
 
+function sssh {
+	ssh-copy-id $1
+	scp /usr/share/terminfo/x/xterm-termite $1:/usr/share/terminfo/x/xterm-termite
+}
+
 alias mng='python ./manage.py'
