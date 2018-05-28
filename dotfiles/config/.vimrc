@@ -8,6 +8,10 @@ Plug 'morhetz/gruvbox'
 Plug 'unblevable/quick-scope'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'tpope/vim-commentary'
+Plug 'sickill/vim-pasta'
+
+" Utils
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -101,3 +105,6 @@ nnoremap > :vertical resize +5<cr>
 " Plugin settings
 " Quickscrope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" ctrlp
+ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
