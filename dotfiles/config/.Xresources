@@ -6,5 +6,8 @@ URxvt.cursorBlink: true
 
 URxvt.font: xft:xos4 Terminus:size=9
 
-*background: #212121
-*foreground: #BDBDBD
+URxvt.background: #212121
+URxvt.foreground: #BDBDBD
+
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlue

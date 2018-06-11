@@ -1,5 +1,7 @@
 #! /bin/bash
 
+xrdb ~/.Xresources
+
 xset r rate 400 40
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 xmodmap -e 'keycode 134 = Menu'
