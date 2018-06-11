@@ -1,7 +1,7 @@
 ## Launchers {{{
 # Terminal
 alt + Return
-	termite
+	urxvt
 
 # Dmenu
 alt + space

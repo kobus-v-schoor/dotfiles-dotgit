@@ -53,3 +53,4 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 .vimrc:config
 .gitconfig:config
 .config/termite/config:config
+.Xresources:config
