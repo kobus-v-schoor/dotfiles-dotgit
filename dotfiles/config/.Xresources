@@ -3,6 +3,7 @@ Xft.antialias: true
 
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
+URxvt.cursorUnderline: 1
 
 URxvt.font: xft:xos4 Terminus:size=9
 
