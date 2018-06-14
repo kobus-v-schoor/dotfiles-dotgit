@@ -5,10 +5,12 @@ URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: 1
 
-URxvt.font: xft:xos4 Terminus:size=9
+URxvt.allow_bold: true
+URxvt*font: xft:xos4 Terminus:size=9
+URxvt*boldFont: xft:xos4 Terminus:bold:size=9
 
 URxvt.background: #212121
 URxvt.foreground: #BDBDBD
 
-URxvt*color4: RoyalBlue
-URxvt*color12: RoyalBlue
+URxvt*color4: #2196F3
+URxvt*color12: #2196F3
