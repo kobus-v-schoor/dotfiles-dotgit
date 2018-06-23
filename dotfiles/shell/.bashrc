@@ -14,7 +14,7 @@ alias grep='grep --color=auto'
 alias rm='rm -I'
 alias du='du -h'
 
-PS1='\[$(tput setaf 74)\]\u@\h \w >\[$(tput sgr0)\] '
+PS1='\[$(tput setaf 11)\]\u@\h \w >\[$(tput sgr0)\] '
 
 [ -f ~/.bash_extra ] && source ~/.bash_extra
 [ -f ~/.bash_local ] && source ~/.bash_local
