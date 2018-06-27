@@ -6,7 +6,6 @@ URxvt.cursorBlink: true
 URxvt.cursorUnderline: 1
 
 URxvt.allow_bold: true
-URxvt*letterSpace: -1
 URxvt*font: xft:Fira Code:medium:size=9
 URxvt*boldFont: xft:Fira Code:bold:size=9
 URxvt.internalBorder: 5
