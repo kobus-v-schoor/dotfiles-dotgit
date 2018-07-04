@@ -23,8 +23,8 @@ notify-urgent-foreground = #212121
 notify-urgent-background = #f44336
 
 [bar/status]
-font-0 = xos4 Terminus:pixelsize=9;3
-font-1 = Material Icons:pixelsize=13;5
+font-0 = xos4 Terminus:pixelsize=9;2
+font-1 = Material Icons:pixelsize=10;4
 
 module-margin-left = 1
 module-margin-right = 1
@@ -47,7 +47,7 @@ monitor = ${env:MONITOR:eDP-1}
 modules-left = bspwm
 modules-right = updates mail backlight volume eth wlan battery clock
 
-width = 1910
+width = 1356
 offset-y = 5
 offset-x = 5
 
