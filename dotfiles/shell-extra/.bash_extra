@@ -2,6 +2,7 @@
 
 export LIBVIRT_DEFAULT_URI=qemu:///system
 export PATH="$PATH:$HOME/.scripts"
+export QT_STYLE_OVERRIDE=gtk
 
 alias sts='git status'
 alias dff='git diff'
@@ -19,16 +20,18 @@ alias xclip='xclip -selection clipboard'
 alias mnt='~/.scripts/auto-mount.sh mount'
 alias umnt='~/.scripts/auto-mount.sh unmount'
 alias ks='ls ~/usb/'
-alias ud='sudo true && packer -Syu && sudo -E pacdiff && cp /dev/null ~/.updates'
+alias ud='sudo true && packer-aur -Syu && sudo -E pacdiff && cp /dev/null ~/.updates'
 alias wt='cat ~/.updates'
 
 alias dpms_off='xset s off; xset -dpms'
 
 alias up='cd ~/.openvpn/up; sudo openvpn up.ovpn; cd -'
+alias gr='cd ~/.openvpn/germ; sudo openvpn germ.ovpn; cd -'
 alias cluster='cd ~/.openvpn/cluster; sudo openvpn client.conf; cd -'
 
 alias wolh='wol -p 23 -i cssh.duckdns.org 00:14:2a:d4:1e:30'
 alias tunnel='ssh -D 8000 cssh.duckdns.org -N'
+alias ca='~/.scripts/create_ap.sh'
 
 function venv {
 	for d in .venv venv .env env; do

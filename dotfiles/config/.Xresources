@@ -5,7 +5,8 @@ URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: 1
 
-URxvt*font: xft:xos4 Terminus:medium:size=9
+URxvt.allow_bold: false
+URxvt*font: xft:xos4 Terminus:size=9
 URxvt.internalBorder: 5
 
 URxvt.background: #282828
@@ -13,3 +14,6 @@ URxvt.foreground: #BDBDBD
 
 URxvt*color4: #2196F3
 URxvt*color12: #2196F3
+
+URxvt.perl-ext:
+URxvt.perl-ext-common:

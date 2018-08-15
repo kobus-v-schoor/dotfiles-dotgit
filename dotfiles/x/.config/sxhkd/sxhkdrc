@@ -72,7 +72,7 @@ super + {Left, Right, Up, Down}
 alt + s
 	bspc node -g sticky
 
-super + button{1-3}
+super + !button{1-3}
     bspc pointer -g {move,resize_side,resize_corner}
 # }}}
 
@@ -95,3 +95,4 @@ ctrl + {_,shift} backslash
 	sleep 0.3; xset dpms force off; {_,slock}
 
 # }}}
+#

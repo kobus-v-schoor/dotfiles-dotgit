@@ -3,17 +3,13 @@ conky.config = {
 	gap_x = 11,
 	gap_y = 11,
 
-	font = 'Roboto Mono:size=9',
+	font = 'xos4 Terminus:size=9',
 	use_xft = true,
 	draw_shades = false,
 
 	double_buffer = true,
 	own_window = true,
 	own_window_type = 'desktop',
-	own_window_colour = '212121',
-
-	lua_load = '~/.conky.lua',
-	lua_draw_hook_pre = 'conky_draw_bg',
 
 	own_window_transparent = true,
 

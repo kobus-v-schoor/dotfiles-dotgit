@@ -12,7 +12,7 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 
 # x
 .config/polybar/config:x
-.wallpaper.png:x
+.wallpaper.jpg:x
 .xinitrc:x
 .config/sxhkd/sxhkdrc:x
 .config/user-dirs.dirs:x
@@ -48,6 +48,7 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 
 .scripts/br_change.sh:laptop
 .scripts/bat_check.sh:laptop
+.scripts/bat_eta.py:laptop
 
 # config
 .vimrc:config

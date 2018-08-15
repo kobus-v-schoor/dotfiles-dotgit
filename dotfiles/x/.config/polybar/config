@@ -44,8 +44,8 @@ inherit = bar/status
 
 monitor = ${env:MONITOR:eDP-1}
 
-modules-left = bspwm
-modules-right = updates mail backlight volume eth wlan battery clock
+modules-left = bspwm-multi
+modules-right = updates mail backlight volume eth wlan battery bat_rem clock
 
 width = 1356
 offset-y = 5
@@ -116,7 +116,7 @@ format-full = <label-full>
 time-format = %H:%M
 
 label-charging =  %percentage%% %time%
-label-discharging =  %percentage%% %time%
+label-discharging =  %percentage%%
 label-full =  %percentage%%
 
 format-charging-foreground = ${colors.battery}
@@ -183,6 +183,14 @@ exec = wc -l ~/.updates | sed 's/\ .*//g'
 format-foreground = ${colors.updates}
 label =  %output%
 interval = 30
+
+[module/bat_rem]
+type = custom/script
+exec-if = [ -f /tmp/bat_rem ]
+exec = cat /tmp/bat_rem
+format-foreground = ${colors.battery}
+label = %output%
+interval = 60
 
 [module/notify-info]
 type = custom/ipc
