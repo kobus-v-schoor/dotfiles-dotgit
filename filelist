@@ -8,7 +8,6 @@
 
 laptop=laptop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,config
 desktop=desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,config
-tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,config
 
 # x
 .config/polybar/config:x
@@ -18,16 +17,15 @@ tt-desktop=tt-desktop,x,shell,shell-extra,scripts,scripts-mod,scripts-daemon,con
 .config/user-dirs.dirs:x
 .conky.lua:x
 
-.config/compton.conf:laptop,desktop
-.config/compton.conf:tt-desktop
+.config/compton.conf:laptop
+.config/compton.conf:desktop
 
 .config/bspwm/bspwmrc:laptop
 .config/bspwm/bspwmrc:desktop
-.config/bspwm/bspwmrc:tt-desktop
 
 .conky:laptop
+.conky_dual:laptop
 .conky:desktop
-.conky:tt-desktop
 
 # shell, shell-extra
 .bashrc:shell

@@ -1,6 +1,6 @@
 conky.config = {
 	alignment = 'bottom_right',
-	gap_x = 1377,
+	gap_x = 1451,
 	gap_y = 11,
 
 	font = 'Roboto Mono:size=9',
@@ -22,7 +22,7 @@ conky.config = {
 
 conky.text = [[
 ${execpi 600 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color '2196F3'}'"$DJS"'$color'/ | sed s/^/'${alignc}'/}
-${color white}${execi 600 ~/.local/bin/gcalcli --calendar 'General' --calendar 'Assignments' --calendar 'Contacts' --conky --nocolor agenda $(date -d "today" +%FT%H:%M) $(date -d "1 week" +%F)}${color}
+${color white}${execi 600 ~/.local/bin/gcalcli --calendar 'General' --calendar 'Assignments' --calendar 'Contacts' --calendar 'Holidays in South Africa' --conky --nocolor agenda $(date -d "today" +%FT%H:%M) $(date -d "1 week" +%F)}${color}
 ${hr}
-${execi 600 ~/.local/bin/gcalcli --calendar 'General' --calendar 'Assignments' --calendar 'Contacts' --conky --nocolor agenda $(date -d "1 week" +%F) $(date -d "6 week" +%F)}
+${execi 600 ~/.local/bin/gcalcli --calendar 'General' --calendar 'Assignments' --calendar 'Contacts' --calendar 'Holidays in South Africa' --conky --nocolor agenda $(date -d "1 week" +%F) $(date -d "6 week" +%F)}
 ]]
