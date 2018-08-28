@@ -19,7 +19,8 @@ alias du='du -h'
 
 alias pword=$'hexdump -v -e \'/1 "%02X"\' -n 40 /dev/random && echo'
 
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='\[\033[38;5;75m\]\u@\h\[\033[00m\]:\[\033[38;5;248m\]\w\[\033[00m\]\$ '
 
+source /usr/share/bash-completion/bash_completion
 [ -f ~/.bash_extra ] && source ~/.bash_extra
 [ -f ~/.bash_local ] && source ~/.bash_local
