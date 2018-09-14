@@ -1,8 +1,7 @@
 #! /bin/sh
 
 sxhkd &
-polybar -q status-laptop &
-# python -u ~/.scripts/lemon.py  | lemonbar -g 1440x30+1440+0 &
+python3 -u ~/.scripts/lemon.py  | lemonbar -g 1366x26 &
 
 bspc config border_width 1
 bspc config focused_border_color '#607D8B'

@@ -5,7 +5,7 @@ alt + Return
 
 # Dmenu
 alt + space
-	dmenu_run -fn "xos4 Terminus:size=9"
+	dmenu_run -fn "Terminus:size=9"
 
 # Web browser
 alt + {backslash, bracketright}

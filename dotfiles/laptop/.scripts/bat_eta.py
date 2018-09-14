@@ -1,4 +1,4 @@
-#! /bin/python
+#! /usr/bin/python3
 
 import os
 import time
@@ -57,7 +57,7 @@ while True:
     hist.append(level())
 
     A = np.vstack([np.array(times), np.ones(len(times))]).T
-    om, c = np.linalg.lstsq(A, hist, rcond=None)[0]
+    om, c = np.linalg.lstsq(A, hist)[0]
 
     if len(hist) <= MIN:
         m = M

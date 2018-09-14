@@ -3,7 +3,7 @@
 xrdb ~/.Xresources &
 
 xset r rate 400 40 &
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+setxkbmap -option caps:escape
 xmodmap -e 'keycode 134 = Menu' &> /dev/null
 
 if xrandr | grep -q "HDMI-1 connected"; then
