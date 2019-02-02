@@ -9,7 +9,7 @@ alt + space
 
 # Web browser
 alt + {backslash, bracketright}
-	firefox {_, mail.google.com}
+	chromium-browser {_, mail.google.com}
 
 # Spice client
 alt + apostrophe
@@ -93,6 +93,12 @@ Scroll_Lock
 # Misc
 ctrl + {_,shift} backslash
 	sleep 0.3; xset dpms force off; {_,slock}
+
+Pause
+	systemctl suspend
+
+XF86Display
+	bspc quit
 
 # }}}
 #

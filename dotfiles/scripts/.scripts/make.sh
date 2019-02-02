@@ -23,9 +23,11 @@ function deps
 	while [[ ${new[*]} ]]; do
 		fns=(${new[@]})
 		new=()
+
 		for i in ${fns[@]}; do
 			PRE=
 			[[ $i =~ \/ ]] && PRE=${i%\/*}
+			[[ -d $i ]] && continue
 
 			while read -r inc; do
 				inc=${inc#*\"}
@@ -57,6 +59,7 @@ function ctrg
 	of+=("$o")
 	echo -n "$o:" >> makefile
 	for i in ${d[@]}; do
+		[[ -d $i ]] && continue
 		echo -e "${pd[*]}\n${bf[*]}"| grep -q "^$i$" || pd+=("$i")
 		echo " \\" >> makefile
 		echo -n " $i" >> makefile
@@ -71,7 +74,7 @@ function exc
 		echo " \\"
 		echo -n " $i"
 	done
-	echo -e "\n\tclang++ \$(gf) ${of[@]} -o $SUB$EXEC\n"
+	echo -e "\n\tg++ \$(gf) ${of[@]} -o $SUB$EXEC\n"
 }
 
 pd=()
@@ -94,14 +97,14 @@ mv makefile tmp
 
 echo -e "ifeq (\$(wildcard ${SUB}last_build),)" >> makefile
 echo -e " ifndef gf\n  gf = $FLAGS\n endif" >> makefile
-echo -e " ifndef go\n  go = clang++ -c \$(gf)\n endif" >> makefile
+echo -e " ifndef go\n  go = g++ -c \$(gf)\n endif" >> makefile
 echo -e "else" >> makefile
 echo -e " ifeq (\$(shell cat ${SUB}last_build),debug)" >> makefile
 echo -e "  ifndef gf\n   gf = $FLAGS\n  endif" >> makefile
-echo -e "  ifndef go\n   go = clang++ -c \$(gf)\n  endif" >> makefile
+echo -e "  ifndef go\n   go = g++ -c \$(gf)\n  endif" >> makefile
 echo -e " else" >> makefile
 echo -e "  ifndef gf\n   gf = $RFLAGS\n  endif" >> makefile
-echo -e "  ifndef go\n   go = clang++ -c \$(gf)\n  endif" >> makefile
+echo -e "  ifndef go\n   go = g++ -c \$(gf)\n  endif" >> makefile
 echo -e " endif" >> makefile
 echo -e "endif\n" >> makefile
 
@@ -118,7 +121,7 @@ echo -e "\tfi\n" >> makefile
 
 echo -e "debug: | ${SUB}last_build" >> makefile
 echo -e "\texport gf=\"$FLAGS\"; \\" >> makefile
-echo -e "\texport go=\"clang++ -c \$\$gf\"; \\" >> makefile
+echo -e "\texport go=\"g++ -c \$\$gf\"; \\" >> makefile
 echo -e "\t[[ \$\$(cat ${SUB}last_build) != debug ]] && \$(MAKE) clean; \\" >> \
 	makefile
 echo -e "\techo debug > ${SUB}last_build; \\" >> makefile
@@ -126,7 +129,7 @@ echo -e "\t\$(MAKE) $SUB$EXEC\n" >> makefile
 
 echo -e "release: | ${SUB}last_build" >> makefile
 echo -e "\texport gf=\"$RFLAGS\"; \\" >> makefile
-echo -e "\texport go=\"clang++ -c \$\$gf\"; \\" >> makefile
+echo -e "\texport go=\"g++ -c \$\$gf\"; \\" >> makefile
 echo -e "\t[[ \$\$(cat ${SUB}last_build) != release ]] && \$(MAKE) clean; \\" >> \
 	makefile
 echo -e "\techo release > ${SUB}last_build; \\" >> makefile

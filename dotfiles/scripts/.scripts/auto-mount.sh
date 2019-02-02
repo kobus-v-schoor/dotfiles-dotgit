@@ -28,6 +28,6 @@ for i in $(usbdevices); do
 
 		udisksctl mount $opt -b $i
 	else
-		grep $i /proc/mounts | grep -q /run/media && udisksctl unmount -b $i
+		grep $i /proc/mounts | grep -q /media && udisksctl unmount -b $i
 	fi
 done
